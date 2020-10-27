@@ -1,4 +1,6 @@
 const express = require('express')
+
+const port = process.env.PORT || 3000
 const cors = require('cors')
 const app = express()
 // app.use(cors())
@@ -72,7 +74,7 @@ app.post('/update', (req, res) => {
     }).catch(e => console.log('error', e))
 })
 
-app.listen(3000, () => {
-    console.log('servr running')
+app.listen(port, () => {
+    console.log('server running at port ' + port)
 })
 
